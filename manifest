@@ -1,0 +1,5 @@
+state="$(cat "$__object/parameter/state")"
+
+__package ntp --state "$state"
+
+require="__package/ntp" __start_on_boot ntp --state "$state"
