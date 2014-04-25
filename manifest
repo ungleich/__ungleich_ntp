@@ -1,5 +1,20 @@
 state="$(cat "$__object/parameter/state")"
+os=$(cat "$__global/explorer/os")
+
+case "$os" in
+    debian|ubuntu)
+        daemon=ntp
+    ;;
+    centos)
+        daemon=ntpd
+    ;;
+
+    *)
+        echo "Unsupported OS: $os" >&2
+        exit 1
+    ;;
+esac
 
 __package ntp --state "$state"
 
-require="__package/ntp" __start_on_boot ntp --state "$state"
+require="__package/ntp" __start_on_boot "$daemon" --state "$state"
