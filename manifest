@@ -9,6 +9,10 @@ case "$os" in
         daemon=ntpd
     ;;
 
+    suse)
+        daemon=ntp
+    ;;
+
     *)
         echo "Unsupported OS: $os" >&2
         exit 1
