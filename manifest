@@ -10,7 +10,7 @@ case "$os" in
     ;;
 
     suse)
-        daemon=ntp
+        daemon=ntpd
     ;;
 
     *)
