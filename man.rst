@@ -1,11 +1,8 @@
 cdist-type__ungleich_ntp(7)
 ===========================
+Manage NTP client
+
 ungleich GmbH <cdist--@--ungleich.ch>
-
-
-NAME
-----
-cdist-type__ungleich_ntp - Manage NTP client
 
 
 DESCRIPTION
@@ -15,17 +12,17 @@ This cdist type (de)configures ntp client on the system.
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-__ungleich_ntp
+.. code-block:: sh
 
-# Remove
-__ungleich_ntp --state absent
---------------------------------------------------------------------------------
+    __ungleich_ntp
+
+    # Remove
+    __ungleich_ntp --state absent
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING
