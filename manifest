@@ -22,3 +22,6 @@ esac
 __package ntp --state "$state"
 
 require="__package/ntp" __start_on_boot "$daemon" --state "$state"
+require="__package/ntp" __file /etc/ntp.conf \
+               --source "$__type/files/ntp.conf-server" \
+               --mode 0644
